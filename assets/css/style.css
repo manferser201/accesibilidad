@@ -1,0 +1,260 @@
+/*--------------------------------------------------
+Project: Ejercicio Entregable Boostrap DIW
+Version: 5.0
+Last change: 29/01/2023
+Assignes to: Manuel Fernández Serrano
+
+[TABLA DE CONTENIDOS]
+
+1. Body
+2. Cabeceras
+3. Header
+4. Nav
+  4.1 Modal
+5. Migas de pan
+6. Columna Principal
+  6.1 Artículos
+  6.2 Paginacion
+  6.3 Formulario
+7. Columna Secundaria
+  7.1 Banner
+  7.2 Redes
+  7.3 Carrusel
+8. Iconos
+9. Enlaces
+10. Footer
+11. Video
+
+[CÓDIGOS DE COLOR]
+
+Color principal: rgb(5, 10, 48)
+Color secundario: rgba(217, 217, 217, 0.64)
+
+[FUENTES Y TIPOGRAFÍAS]
+Cabeceras: 'Racing Sans One', cursive
+General: 'Montserrat', sans-serif
+
+--------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Racing+Sans+One&display=swap');
+
+/********** 1. Body **********/
+body{
+  margin: 0%;
+  background-color: rgb(5, 10, 48);
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+}
+
+/********** 2. Cabeceras **********/
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Racing Sans One', cursive;
+}
+
+h2 {
+  font-family: 'Racing Sans One', cursive;
+}
+
+h3 {
+  text-align: center;
+  padding-top: 1%;
+  font-family: 'Racing Sans One', cursive;
+}
+
+/********** 3. Header **********/
+header {
+  text-align: center;
+  background-color: white;
+}
+
+/********** 4. Navbar **********/
+.navbar{
+  background-color: white;
+}
+
+.buscar {
+  width: 30%;
+  padding: 0%;
+  margin-bottom: 0%;
+  background-color: white;
+}
+
+#busqueda {
+  padding: 0%;
+  margin-top: 0%;
+}
+
+/***** 4.1 Modal *****/
+#login, .modal-content, #restorePassword a, form a {
+  color: white;
+}
+
+.modal-content {
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background: linear-gradient(-225deg, #030519 50%, #050A30 50%);
+}
+
+.modal-header {
+  margin: 2% auto 10% auto;
+  text-align: center;
+}
+
+.modal-header h5 {
+  font-size: 250%;
+  font-family: 'Playfair Display', serif;
+  color: #3e403f;
+}
+
+.modal-header p {
+  letter-spacing: 0.05em;
+}
+
+/********** 5. Migas de pan **********/
+.migasDePan a{
+  color: white;
+}
+
+/********** 6. Columna Principal **********/
+/***** 6.1  Artículos *****/
+article {
+  background-color: rgba(217, 217, 217, 0.64);
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+.articulos img {
+  border-radius: 10px;
+}
+
+/***** 6.2 Paginacion *****/
+#paginacion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/***** 6.3 Formulario *****/
+#registro {
+  background-color: rgba(217, 217, 217, 0.64);
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 2%;
+}
+
+label {
+  padding-top: 1%;
+}
+
+button {
+  margin-top: 2%;
+}
+
+/********** 7. Columna Secundaria **********/
+.sidebar {
+  text-align: center;
+}
+
+#aside {
+  background-color: rgba(217, 217, 217, 0.64);
+  border-radius: 10px;
+  padding: 3%;
+}
+
+/***** 7.1 Banner *****/
+#banner {
+  width: 90%;
+  text-align: center;
+  padding-left: 10%;
+}
+
+/***** 7.2 Redes sociales *****/
+#redes{
+  text-align: center;
+}
+
+/***** 7.3 Carrusel *****/
+#entradasDestacadas {
+  color: black;
+}
+
+/* 8. Iconos */
+li div svg{
+  width: 5%;
+  padding-top: 3%;
+}
+
+button > svg {
+  width: 8%;
+}
+
+p > svg {
+  width: 18%;
+}
+
+a svg {
+  width: 6%;
+}
+
+/* 9. Enlaces */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* 10. Footer */
+footer {
+  background-color: white;
+  margin-top: 5%;
+  padding: 1%;
+  text-align: center;
+}
+
+#mapa {
+  width: 50%;
+  height: 70%;
+}
+
+.logo {
+  text-align: center;
+}
+
+#logo {
+  height: 70%;
+}
+/* 11. Video */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn, #myBtn2 {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover, #myBtn2:hover {
+  background: #ddd;
+  color: black;
+}

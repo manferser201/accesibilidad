@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Ejemplo Básico Aplicación Web">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imperial Event </title>
+  <!-- La mayoria de los navegadores reconocen el archivo favicon.ico o favicon.png si están en la raiz del proyecto -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- end Bootstrap CSS -->
+  <!-- css files -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- end js files -->
+</head>
+
+<body>
+  <!------------------------------ HEADER ------------------------------>
+  <header>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/images/logo_cabecera.svg" alt="Logo">
+      </a>
+    </div>
+  </header>
+
+  <!------------------------------ Menu ------------------------------>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./register.html">Registro</a>
+          </li>
+          <li class="nav-item">
+            <div class="input-group">
+              <a class="nav-link" href="">Crear Entrada</a>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                  <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                </svg>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex buscar" role="search">
+          <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#search" aria-expanded="false" aria-controls="search" id="busqueda">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+          </button>
+          <div class="collapse" id="search">
+            <div class="input-group">
+              <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
+              <div class="input-group-text">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#search"></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <h1>Registro</h1>
+
+    <!------------------------------ MIGAS DE PAN ------------------------------>
+    <div class="row migasDePan">
+      <div class="col-12">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Registro</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!------------------------------ COLUMNA PRINCIPAL ------------------------------>
+      <div class="col-md-8">
+        <form class="row" id="registro">
+          <div class="col-md-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="col-md-4">
+            <label for="aoellidos" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="aoellidos" required>
+          </div>
+          <div class="col-md-5">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+              <div class="input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                </svg>
+              </div>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <label for="direction" class="form-label">Dirección</label>
+            <div class="input-group">
+              <div class="input-group-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z" />
+                </svg>
+              </div>
+              <input type="text" class="form-control" id="direction">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="postalCode" class="form-label">Código postal</label>
+            <input type="text" class="form-control" id="postalCode">
+          </div>
+          <div class="col-md-4">
+            <label for="city" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="city">
+          </div>
+          <div class="col-md-4">
+            <label for="province" class="form-label">Provincia</label>
+            <select class="form-select" aria-label="Provincia" name="province">
+              <option value="0" selected></option>
+              <option value="sevilla">Sevilla</option>
+              <option value="granada">Granada</option>
+              <option value="jaen">Jaén</option>
+              <option value="malaga">Málaga</option>
+              <option value="almeria">Almería</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="CA" class="form-label">Comunidad Autónoma</label>
+            <select class="form-select" aria-label="Comunidad Autónoma" name="CA">
+              <option value="0" selected></option>
+              <option value="andalucia">Andalucía</option>
+              <option value="comunidadDeMadrid">Comunidad de Madrid</option>
+              <option value="aataluna">Cataluña</option>
+              <option value="comunidadValenciana">Comunidad Valenciana</option>
+              <option value="extremadura">Extremadura</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea class="form-control" id="description"></textarea>
+          </div>
+          <div class="col-12">
+            <label for="InstagramUser" class="form-label">Usuario Instagram</label>
+            <div class="input-group">
+              <div class="input-group-text">
+                https://instagram.com/
+              </div>
+              <input type="text" class="form-control" id="InstagramUser">
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="reset" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+      <!------------------------------ COLUMNA SECUNDARIA ------------------------------>
+      <div class="col-md-4 sidebar">
+        <div id="aside">
+          <aside id="banner">
+            <img src="./assets/images/banner.png" alt="Banner" class="img-fluid">
+          </aside>
+          <hr>
+          <aside id="redes">
+            <h2>Síguenos en redes</h2>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+              </svg>
+            </a>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+              </svg>
+            </a>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+              </svg>
+            </a>
+          </aside>
+          <hr>
+          <aside id="entradasDestacadas">
+            <h2>Entradas destacadas</h2>
+            <div class="container">
+              <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./assets/images/imagen_articulo1.jpg" class="d-block w-100 h-50" alt="Imagen Carrusel 1">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>First slide label</h5>
+                      <div class="text-truncate">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, vero? Sint nesciunt non
+                        temporibus, quos molestiae at quidem alias! Quidem enim perferendis nihil explicabo. Laudantium
+                        saepe magnam enim rerum quibusdam!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/images/imagen_articulo2.jpg" class="d-block w-100 h-50" alt="Imagen Carrusel 2">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Second slide label</h5>
+                      <div class="text-truncate">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, vero? Sint nesciunt non
+                        temporibus, quos molestiae at quidem alias! Quidem enim perferendis nihil explicabo. Laudantium
+                        saepe magnam enim rerum quibusdam!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/images/imagen_articulo3.jpg" class="d-block w-100 h-50" alt="Imagen Carrusel 3">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <div class="text-truncate">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, vero? Sint nesciunt non
+                        temporibus, quos molestiae at quidem alias! Quidem enim perferendis nihil explicabo. Laudantium
+                        saepe magnam enim rerum quibusdam!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------------------------ FOOTER ------------------------------>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 mapa">
+          <h3>Localización</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12680.804793370105!2d-6.084636516655634!3d37.38507387547015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd12134ef9605379%3A0xf818c5685e4d8acf!2sGines%2C%20Sevilla!5e0!3m2!1ses!2ses!4v1674552679606!5m2!1ses!2ses"
+            width="200" height="250" style="border:0;" allowfullscreen="" loading="lazy" id="mapa"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-2">
+          <h3>Secciones Principales</h3>
+          <p><a href="./index.html">Home</a></p>
+          <p><a href="./register.html">Registro</a></p>
+          <p><a href="" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
+          <p><a href="#">Crear entreda</a></p>
+        </div>
+        <div class="col-md-4 logo" >
+          <img src="./assets/images/logo_footer.svg" alt="Logo Footer" class="img-fluid" id="logo">
+        </div>
+        <div class="col-md-2">
+          <h3>Etiquetas relacionadas</h3>
+          <p><a href="">#EventoRunning</a><a href="">#Running</a></p>
+          <p><a href="">#Runner</a><a href="">#EventoDeportivo</a></p>
+          <p><a href="">#Saludable</a><a href="">#Equipo</a></p>
+          <p><a href="">#Entrenamiento</a><a href="">#Deporte</a></p>
+        </div>
+        <div class="col-md-2">
+          <h3>Categorías</h3>
+          <p><a href="">Noticias</a></p>
+          <p><a href="">Eventos Nuevos</a></p>
+          <p><a href=""></a></p>
+          <p></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <h3>Derechos de autor</h3>
+          <a href=""><img src="./assets/images/licencia_creative_commons.png" alt="Derechos de autor"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!------------------------------ LOGIN MODAL ------------------------------>
+  <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="login">Inicio de Sesión</h5>
+        </div>
+        <p style="text-align: center;">Introduce tu usuario y tu contraseña</p>
+        <div class="modal-body">
+          <form id="modal">
+            <div class="mb-3">
+              <label for="user" class="form-label">Usuario</label>
+              <div class="input-group">
+                <div class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                  </svg>
+                </div>
+                <input type="text" class="form-control" id="user">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <div class="input-group">
+                <div class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                  </svg>
+                </div>
+                <input type="password" class="form-control" id="password" aria-describedby="restorePassword">
+              </div>
+              <div id="restorePassword"><a href="">He olvidado mi contraseña</a></div>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="mantenerSesionIniciada">
+              <label class="form-check-label" for="mantenerSesionIniciada">Mantener la sesión abierta</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-secondary">Cancelar</button>
+            <a href="./register.html">¿Aún no te has registrado?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <!-- Primero jQuery, después Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+  <!-- En ultimo lugar nuestros scripts -->
+  <script defer src="assets/js/index.js"></script>
+  <!-- end JavaScript -->
+</body>
+
+</html>
