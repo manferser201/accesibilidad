@@ -114,6 +114,11 @@ header {
 /********** 5. Migas de pan **********/
 .migasDePan a{
   color: white;
+  font-weight: bolder;
+}
+
+.migasDePan li.active {
+  color: white;
 }
 
 /********** 6. Columna Principal **********/
